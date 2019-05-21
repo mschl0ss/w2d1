@@ -14,8 +14,7 @@ class NullPiece < Piece
      "N".to_s 
   end
 
-  # def inspect
+  # def self.inspect
   #   @output_string
   # end
 
-end
