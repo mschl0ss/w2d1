@@ -5,6 +5,7 @@ require_relative 'board.rb'
 
 class Display
   def initialize(board)  
+    system("clear")
     @board = board
     @cursor = Cursor.new([0, 0], board)
   end
@@ -13,7 +14,7 @@ class Display
     for row in 0..7 
       for col in 0..7
         if [row, col] == @cursor.cursor_pos
-          print @board.grid[row][col].inspect.colorize(:background => :red)
+          print @board.grid[row][col].inspect.colorize(:background => :green)
         else  
           print @board.grid[row][col].inspect
         end
@@ -23,11 +24,13 @@ class Display
   end
 
   def move_cursor
+    
     until false
       @cursor.get_input
       # puts"------------------------"
       system("clear")
       render
+      
     end
   end
 end

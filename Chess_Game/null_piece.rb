@@ -1,5 +1,6 @@
 require_relative 'piece.rb'
 require 'singleton'
+require 'colorize'
 
 class NullPiece < Piece
 
@@ -7,15 +8,13 @@ class NullPiece < Piece
 
   attr_reader :output_string
   def initialize
-    @output_string = " N "
+    @color = :green
+    @symbol = " N "
   end
 
   def inspect 
-    " N "
+    @symbol.colorize(:color => @color)
   end
 
-  # def self.inspect
-  #   @output_string
-  # end
-
+ 
 end

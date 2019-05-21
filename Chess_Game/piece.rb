@@ -3,12 +3,14 @@
 class Piece
 
   def initialize
-    @output_string = " P "
+    # @output_string = " P "
+    @color = :white
+    @symbol = " P "
 
   end
 
   def inspect
-    @output_string
+    @symbol.colorize(:color => @color)
   end
 
 end
