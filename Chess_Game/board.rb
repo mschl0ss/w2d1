@@ -19,7 +19,7 @@ class Board
         if row <=1 || row >= 6
           @grid[row][col] = Piece.new
         else
-          @grid[row][col] = NullPiece.output_string
+          @grid[row][col] = NullPiece.instance
         end
       end
     end

@@ -21,8 +21,20 @@ class Display
       puts 
     end
   end
+
+  def move_cursor
+    until false
+      @cursor.get_input
+      # puts"------------------------"
+      system("clear")
+      render
+    end
+  end
 end
+
+
 
 b = Board.new 
 d = Display.new(b)
 d.render 
+d.move_cursor

@@ -10,11 +10,12 @@ class NullPiece < Piece
     @output_string = " N "
   end
 
-  def self.output_string
-     "N".to_s 
+  def inspect 
+    " N "
   end
 
   # def self.inspect
   #   @output_string
   # end
 
+end
