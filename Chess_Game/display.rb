@@ -1,12 +1,28 @@
 require 'colorize'
 
 require_relative 'cursor.rb'
-require 'board.rb'
+require_relative 'board.rb'
 
 class Display
   def initialize(board)  
+    @board = board
     @cursor = Cursor.new([0, 0], board)
   end
 
-  def 
+  def render
+    for row in 0..7 
+      for col in 0..7
+        if [row, col] == @cursor.cursor_pos
+          print @board.grid[row][col].inspect.colorize(:background => :red)
+        else  
+          print @board.grid[row][col].inspect
+        end
+      end
+      puts 
+    end
+  end
 end
+
+b = Board.new 
+d = Display.new(b)
+d.render 

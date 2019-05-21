@@ -3,12 +3,12 @@
 class Piece
 
   def initialize
-
+    @output_string = " P "
 
   end
 
   def inspect
-    "P"
+    @output_string
   end
 
 end
